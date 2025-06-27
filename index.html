@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T.S.N.P COMPUTING AND INFORMATICS DEPARTMENT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 350px;
+            position: relative;
+        }
+        .marquee {
+            width: 100%;
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 10s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        label, select, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="marquee">
+        <span>Only bonafide trainees of The Siaya National Polytechnic from the department of Computing and Informatics are allowed to join this whatsapp group.</span>
+    </div>
+    <h3>Join WhatsApp Group</h3>
+    <form id="loginForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="role">Role</label>
+        <select id="role" required>
+            <option value="">Select</option>
+            <option value="student">Student</option>
+            <option value="staff">Staff</option>
+        </select>
+
+        <div id="studentFields" class="hidden">
+            <label for="admission">Admission Number</label>
+            <input type="text" id="admission">
+        </div>
+
+        <div id="staffFields" class="hidden">
+            <label for="staffNumber">Staff Number</label>
+            <input type="text" id="staffNumber">
+        </div>
+
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" required>
+
+        <label for="department">Department</label>
+        <select id="department" required>
+            <option value="">Select</option>
+            <option value="Information Communication Technology">Information Communication Technology</option>
+            <option value="Computing and Informatics">Computing and Informatics</option>
+        </select>
+
+        <label for="course">Course</label>
+        <input type="text" id="course" required>
+
+        <button type="submit">Join Group</button>
+    </form>
+</div>
+
+<script>
+    const role = document.getElementById('role');
+    const studentFields = document.getElementById('studentFields');
+    const staffFields = document.getElementById('staffFields');
+    const form = document.getElementById('loginForm');
+
+    role.addEventListener('change', () => {
+        if (role.value === 'student') {
+            studentFields.classList.remove('hidden');
+            staffFields.classList.add('hidden');
+        } else if (role.value === 'staff') {
+            staffFields.classList.remove('hidden');
+            studentFields.classList.add('hidden');
+        } else {
+            studentFields.classList.add('hidden');
+            staffFields.classList.add('hidden');
+        }
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+        const department = document.getElementById('department').value;
+        const course = document.getElementById('course').value.trim();
+
+        if (name === '' || contact === '' || department === '' || course === '') {
+            alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
+            return;
+        }
+
+        const roleValue = role.value;
+
+        if (roleValue === 'student') {
+            const admission = document.getElementById('admission').value.trim();
+            const admissionPattern = /^(DICT|CICT|LIS|DLIS|ICT5|ICT6|RAM5|RAM6|RAM4).*(S22|S23|S24|S25|M22|M23|M24|M25|J22|J23|J24|J25)$/i;
+            const contactPattern = /^(?:\+254|07|01)\d{8}$/;
+
+            if (!admissionPattern.test(admission) || !contactPattern.test(contact)) {
+                alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
+                return;
+            }
+        } else if (roleValue === 'staff') {
+            const staffNumber = document.getElementById('staffNumber').value.trim();
+            const contactPattern = /^(?:\+254|07|01)\d{8}$/;
+
+            if (staffNumber.length < 4 || staffNumber.length > 13 || !contactPattern.test(contact)) {
+                alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
+                return;
+            }
+        } else {
+            alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
+            return;
+        }
+
+        window.location.href = "https://chat.whatsapp.com/Ly2IGqYb8BrK14VWHO6rnY";
+    });
+</script>
+
+</body>
+</html>
