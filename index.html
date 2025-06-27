@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,11 +98,7 @@
         <input type="text" id="contact" required>
 
         <label for="department">Department</label>
-        <select id="department" required>
-            <option value="">Select</option>
-            <option value="Information Communication Technology">Information Communication Technology</option>
-            <option value="Computing and Informatics">Computing and Informatics</option>
-        </select>
+        <input type="text" id="department" required>
 
         <label for="course">Course</label>
         <input type="text" id="course" required>
@@ -136,10 +131,15 @@
 
         const name = document.getElementById('name').value.trim();
         const contact = document.getElementById('contact').value.trim();
-        const department = document.getElementById('department').value;
+        const department = document.getElementById('department').value.trim();
         const course = document.getElementById('course').value.trim();
 
         if (name === '' || contact === '' || department === '' || course === '') {
+            alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
+            return;
+        }
+
+        if (department.length < 6 || department.toLowerCase().includes('initial')) {
             alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
             return;
         }
