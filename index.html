@@ -120,14 +120,13 @@
     </style>
 
     <script>
-        // Disable right-click
         document.addEventListener('contextmenu', event => event.preventDefault());
-
-        // Disable F12, Ctrl+U, Ctrl+Shift+I
         document.onkeydown = function (e) {
-            if (e.keyCode === 123) return false; // F12
-            if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) return false; // Ctrl+Shift+I or J
-            if (e.ctrlKey && e.keyCode === 85) return false; // Ctrl+U
+            if (e.keyCode === 123 ||
+                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
+                (e.ctrlKey && e.keyCode === 85)) {
+                return false;
+            }
         };
     </script>
 </head>
@@ -184,6 +183,8 @@
         <li><a href="https://portal.siayapolytechnic.ac.ke/Account/StudentLetterOfOffer?returnUrl=%2FAppAdmin" target="_blank">Download Admission Letter</a></li>
         <li><a href="https://portal.siayapolytechnic.ac.ke/Account/Register?returnUrl=%2FAppAdmin" target="_blank">Student Portal Registration</a></li>
         <li><a href="https://portal.siayapolytechnic.ac.ke/Account/EmailActivation" target="_blank">Course Application</a></li>
+        <li><a href="https://sites.google.com/view/siaya-poly-help-desk" target="_blank">SIAYA POLY ONLINE SERVICES HELP DESK</a></li>
+        <li><a href="https://orikowilliamotieno.github.io/siaya-whatsapp-register/" target="_blank">THE SIAYA NATIONAL POLYTECHNIC OFFICIAL PAGE</a></li>
     </ul>
 </div>
 
