@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>T.S.N.P COMPUTING AND INFORMATICS DEPARTMENT</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Official WhatsApp Group Page for T.S.N.P Computing and Informatics Department of The Siaya National Polytechnic. Click to join the group instantly.">
     <meta name="keywords" content="T.S.N.P, COMPUTING, INFORMATICS, DEPARTMENT, WhatsApp group, Siaya Poly, TSNP ICT, Oriko William Otieno, Siaya Polytechnic Help Desk">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Oriko William Otieno">
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -87,65 +87,109 @@
         }
         footer {
             width: 100%;
-            background-color: #eaeaea;
+            background-color: #000033;
             padding: 10px 0;
             font-size: 14px;
-            color: #333;
-            position: relative;
+            color: lightblue;
+            position: fixed;
+            bottom: 0;
+            left: 0;
         }
         footer marquee {
             font-weight: bold;
-            color: #333;
+        }
+        .rules, .reference-links {
+            width: 90%;
+            max-width: 600px;
+            background-color: white;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .rules h2, .reference-links h2 {
+            color: #004080;
+        }
+        .reference-links a {
+            color: #004080;
+            text-decoration: none;
+        }
+        .reference-links a:hover {
+            text-decoration: underline;
         }
     </style>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable F12, Ctrl+U, Ctrl+Shift+I
+        document.onkeydown = function (e) {
+            if (e.keyCode === 123) return false; // F12
+            if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) return false; // Ctrl+Shift+I or J
+            if (e.ctrlKey && e.keyCode === 85) return false; // Ctrl+U
+        };
+    </script>
 </head>
 <body>
-
 <div class="container">
     <div class="marquee">
         <span>Only bonafide trainees of The Siaya National Polytechnic from the department of Computing and Informatics are allowed to join this whatsapp group.</span>
     </div>
-    
     <img src="logo.jpg" alt="TSNP Logo" class="logo">
     <h3>T.S.N.P COMPUTING AND INFORMATICS DEPARTMENT</h3>
-
     <form id="loginForm">
         <label for="name">Full Name</label>
         <input type="text" id="name" required>
-
         <label for="role">Role</label>
         <select id="role" required>
             <option value="">Select</option>
             <option value="student">Student</option>
             <option value="staff">Staff</option>
         </select>
-
         <div id="studentFields" class="hidden">
             <label for="admission">Admission Number</label>
             <input type="text" id="admission">
         </div>
-
         <div id="staffFields" class="hidden">
             <label for="staffNumber">Staff Number</label>
             <input type="text" id="staffNumber">
         </div>
-
         <label for="contact">Contact</label>
         <input type="text" id="contact" required>
-
         <label for="department">Department</label>
         <input type="text" id="department" required>
-
         <label for="course">Course</label>
         <input type="text" id="course" required>
-
         <button type="submit">Join Group</button>
     </form>
 </div>
 
+<div class="rules">
+    <h2>WhatsApp Group Rules</h2>
+    <ul>
+        <li>Respect everyone and avoid using offensive language.</li>
+        <li>Only academic or official matters should be posted.</li>
+        <li>No spamming or unrelated content.</li>
+        <li>Use real names for identification.</li>
+        <li>Do not share group links with outsiders.</li>
+        <li>Failure to follow rules will lead to removal.</li>
+    </ul>
+</div>
+
+<div class="reference-links">
+    <h2>Important Reference Links</h2>
+    <ul>
+        <li><a href="https://portal.siayapolytechnic.ac.ke/" target="_blank">School Portal Login</a></li>
+        <li><a href="https://portal.siayapolytechnic.ac.ke/Account/StudentLetterOfOffer?returnUrl=%2FAppAdmin" target="_blank">Download Admission Letter</a></li>
+        <li><a href="https://portal.siayapolytechnic.ac.ke/Account/Register?returnUrl=%2FAppAdmin" target="_blank">Student Portal Registration</a></li>
+        <li><a href="https://portal.siayapolytechnic.ac.ke/Account/EmailActivation" target="_blank">Course Application</a></li>
+    </ul>
+</div>
+
 <footer>
     <marquee behavior="scroll" direction="right">
-        Prepared and Designed By Oriko William Otieno ICT, For more any assistance contact on 0784151456/071111222.
+        Prepared and Designed By Oriko William Otieno ICT, For more any assistance contact on 0784151456/071111222. Email: willieotieno15@gmail.com
     </marquee>
 </footer>
 
@@ -213,6 +257,5 @@
         window.location.href = "https://chat.whatsapp.com/Ly2IGqYb8BrK14VWHO6rnY";
     });
 </script>
-
 </body>
 </html>
