@@ -1,281 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>T.S.N.P COMPUTING AND INFORMATICS DEPARTMENT</title>
+  <meta charset="UTF-8">
+  <title>T.S.N.P COMPUTING AND INFORMATICS DEPARTMENT</title>
+  <meta name="description" content="Official WhatsApp Group Page for T.S.N.P Computing and Informatics Department of The Siaya National Polytechnic. Click to join the group instantly.">
+  <meta name="keywords" content="T.S.N.P, COMPUTING, INFORMATICS, DEPARTMENT, WhatsApp group, Siaya Poly, TSNP ICT, Oriko William Otieno, Siaya Polytechnic Help Desk">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Oriko William Otieno">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef2f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Official WhatsApp Group Page for T.S.N.P Computing and Informatics Department of The Siaya National Polytechnic. Click to join the group instantly.">
-    <meta name="keywords" content="T.S.N.P, COMPUTING, INFORMATICS, DEPARTMENT, WhatsApp group, Siaya Poly, TSNP ICT, Oriko William Otieno, Siaya Polytechnic Help Desk">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Oriko William Otieno">
+    header {
+      width: 100%;
+      background: #003366;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-            width: 350px;
-            position: relative;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .marquee {
-            width: 100%;
-            background: #007BFF;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            overflow: hidden;
-            white-space: nowrap;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        .marquee span {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scroll-left 10s linear infinite;
-        }
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        label, select, input {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-            box-sizing: border-box;
-            text-align: left;
-        }
-        button {
-            background: #007BFF;
-            color: white;
-            padding: 10px;
-            border: none;
-            width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .hidden {
-            display: none;
-        }
-        .logo {
-            width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        h3 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        footer {
-            width: 100%;
-            background-color: #000033;
-            padding: 10px 0;
-            font-size: 14px;
-            color: lightblue;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-        }
-        footer marquee {
-            font-weight: bold;
-        }
-        .rules, .reference-links {
-            width: 90%;
-            max-width: 600px;
-            background-color: white;
-            padding: 15px;
-            margin: 10px auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .rules h2, .reference-links h2 {
-            color: #004080;
-        }
-        .reference-links a {
-            color: #004080;
-            text-decoration: none;
-        }
-        .reference-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .container {
+      background: #ffffff;
+      margin-top: 30px;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 90%;
+    }
 
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function (e) {
-            if (e.keyCode === 123 ||
-                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
-                (e.ctrlKey && e.keyCode === 85)) {
-                return false;
-            }
-        };
-    </script>
+    .logo {
+      width: 90px;
+      margin-bottom: 15px;
+    }
+
+    .marquee {
+      background: #004080;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 12s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    form label {
+      margin: 10px 0 5px;
+      display: block;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .rules, .reference-links {
+      background: #ffffff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 90%;
+      width: 600px;
+    }
+
+    .rules h2, .reference-links h2 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+
+    .rules ul, .reference-links ul {
+      padding-left: 20px;
+    }
+
+    .reference-links a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    .reference-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      width: 100%;
+      background: #000033;
+      color: lightblue;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+    }
+
+    footer marquee {
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .container, .rules, .reference-links {
+        padding: 15px;
+      }
+
+      form input, form select {
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function (e) {
+      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && e.keyCode === 85)) {
+        return false;
+      }
+    };
+  </script>
 </head>
 <body>
+
+<header>
+  <h2>T.S.N.P COMPUTING AND INFORMATICS DEPARTMENT</h2>
+</header>
+
 <div class="container">
-    <div class="marquee">
-        <span>Only bonafide trainees of The Siaya National Polytechnic from the department of Computing and Informatics are allowed to join this whatsapp group.</span>
+  <div class="marquee">
+    <span>Only bonafide trainees of The Siaya National Polytechnic from the department of Computing and Informatics are allowed to join this WhatsApp group.</span>
+  </div>
+
+  <img src="logo.jpg" alt="TSNP Logo" class="logo">
+
+  <form id="loginForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required>
+
+    <label for="role">Role</label>
+    <select id="role" required>
+      <option value="">Select</option>
+      <option value="student">Student</option>
+      <option value="staff">Staff</option>
+    </select>
+
+    <div id="studentFields" class="hidden">
+      <label for="admission">Admission Number</label>
+      <input type="text" id="admission">
     </div>
-    <img src="logo.jpg" alt="TSNP Logo" class="logo">
-    <h3>T.S.N.P COMPUTING AND INFORMATICS DEPARTMENT</h3>
-    <form id="loginForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required>
 
-        <label for="role">Role</label>
-        <select id="role" required>
-            <option value="">Select</option>
-            <option value="student">Student</option>
-            <option value="staff">Staff</option>
-        </select>
+    <div id="staffFields" class="hidden">
+      <label for="staffNumber">Staff Number</label>
+      <input type="text" id="staffNumber">
+    </div>
 
-        <div id="studentFields" class="hidden">
-            <label for="admission">Admission Number</label>
-            <input type="text" id="admission">
-        </div>
+    <label for="contact">Contact</label>
+    <input type="text" id="contact" required>
 
-        <div id="staffFields" class="hidden">
-            <label for="staffNumber">Staff Number</label>
-            <input type="text" id="staffNumber">
-        </div>
+    <label for="department">Department</label>
+    <input type="text" id="department" required>
 
-        <label for="contact">Contact</label>
-        <input type="text" id="contact" required>
+    <label for="course" id="courseLabel">Course</label>
+    <input type="text" id="course" required>
 
-        <label for="department">Department</label>
-        <input type="text" id="department" required>
-
-        <label for="course" id="courseLabel">Course</label>
-        <input type="text" id="course" required>
-
-        <button type="submit">Join Group</button>
-    </form>
+    <button type="submit">Join Group</button>
+  </form>
 </div>
 
 <div class="rules">
-    <h2>WhatsApp Group Rules</h2>
-    <ul>
-        <li>Respect everyone and avoid using offensive language.</li>
-        <li>Only academic or official matters should be posted.</li>
-        <li>No spamming or unrelated content.</li>
-        <li>Use real names for identification.</li>
-        <li>Do not share group links with outsiders.</li>
-        <li>Failure to follow rules will lead to removal.</li>
-    </ul>
+  <h2>WhatsApp Group Rules</h2>
+  <ul>
+    <li>Respect everyone and avoid using offensive language.</li>
+    <li>Only academic or official matters should be posted.</li>
+    <li>No spamming or unrelated content.</li>
+    <li>Use real names for identification.</li>
+    <li>Do not share group links with outsiders.</li>
+    <li>Failure to follow rules will lead to removal.</li>
+  </ul>
 </div>
 
 <div class="reference-links">
-    <h2>Important Reference Links</h2>
-    <ul>
-        <li><a href="https://portal.siayapolytechnic.ac.ke/" target="_blank">School Portal Login</a></li>
-        <li><a href="https://portal.siayapolytechnic.ac.ke/Account/StudentLetterOfOffer?returnUrl=%2FAppAdmin" target="_blank">Download Admission Letter</a></li>
-        <li><a href="https://portal.siayapolytechnic.ac.ke/Account/Register?returnUrl=%2FAppAdmin" target="_blank">Student Portal Registration</a></li>
-        <li><a href="https://portal.siayapolytechnic.ac.ke/Account/EmailActivation" target="_blank">Course Application</a></li>
-        <li><a href="https://sites.google.com/view/siaya-poly-help-desk" target="_blank">SIAYA POLY ONLINE SERVICES HELP DESK</a></li>
-        <li><a href="https://orikowilliamotieno.github.io/siaya-whatsapp-register/" target="_blank">THE SIAYA NATIONAL POLYTECHNIC OFFICIAL PAGE</a></li>
-    </ul>
+  <h2>Important Reference Links</h2>
+  <ul>
+    <li><a href="https://portal.siayapolytechnic.ac.ke/" target="_blank">School Portal Login</a></li>
+    <li><a href="https://portal.siayapolytechnic.ac.ke/Account/StudentLetterOfOffer?returnUrl=%2FAppAdmin" target="_blank">Download Admission Letter</a></li>
+    <li><a href="https://portal.siayapolytechnic.ac.ke/Account/Register?returnUrl=%2FAppAdmin" target="_blank">Student Portal Registration</a></li>
+    <li><a href="https://portal.siayapolytechnic.ac.ke/Account/EmailActivation" target="_blank">Course Application</a></li>
+    <li><a href="https://sites.google.com/view/siaya-poly-help-desk" target="_blank">SIAYA POLY ONLINE SERVICES HELP DESK</a></li>
+    <li><a href="https://orikowilliamotieno.github.io/siaya-whatsapp-register/" target="_blank">THE SIAYA NATIONAL POLYTECHNIC OFFICIAL PAGE</a></li>
+  </ul>
 </div>
 
 <footer>
-    <marquee behavior="scroll" direction="left">
-        Prepared and Designed By Oriko William Otieno ICT, For more any assistance contact on 0784151456/071111222. Email: willieotieno15@gmail.com
-    </marquee>
+  <marquee behavior="scroll" direction="left">
+    Prepared and Designed By Oriko William Otieno ICT, For any assistance contact 0784151456 / 071111222. Email: willieotieno15@gmail.com
+  </marquee>
 </footer>
 
 <script>
-    const role = document.getElementById('role');
-    const studentFields = document.getElementById('studentFields');
-    const staffFields = document.getElementById('staffFields');
-    const courseField = document.getElementById('course');
-    const courseLabel = document.getElementById('courseLabel');
-    const form = document.getElementById('loginForm');
+  const role = document.getElementById('role');
+  const studentFields = document.getElementById('studentFields');
+  const staffFields = document.getElementById('staffFields');
+  const courseField = document.getElementById('course');
+  const courseLabel = document.getElementById('courseLabel');
+  const form = document.getElementById('loginForm');
 
-    role.addEventListener('change', () => {
-        if (role.value === 'student') {
-            studentFields.classList.remove('hidden');
-            staffFields.classList.add('hidden');
-            courseField.classList.remove('hidden');
-            courseLabel.classList.remove('hidden');
-        } else if (role.value === 'staff') {
-            staffFields.classList.remove('hidden');
-            studentFields.classList.add('hidden');
-            courseField.classList.add('hidden');
-            courseLabel.classList.add('hidden');
-        } else {
-            studentFields.classList.add('hidden');
-            staffFields.classList.add('hidden');
-            courseField.classList.remove('hidden');
-            courseLabel.classList.remove('hidden');
-        }
-    });
+  role.addEventListener('change', () => {
+    if (role.value === 'student') {
+      studentFields.classList.remove('hidden');
+      staffFields.classList.add('hidden');
+      courseField.classList.remove('hidden');
+      courseLabel.classList.remove('hidden');
+    } else if (role.value === 'staff') {
+      staffFields.classList.remove('hidden');
+      studentFields.classList.add('hidden');
+      courseField.classList.add('hidden');
+      courseLabel.classList.add('hidden');
+    } else {
+      studentFields.classList.add('hidden');
+      staffFields.classList.add('hidden');
+      courseField.classList.remove('hidden');
+      courseLabel.classList.remove('hidden');
+    }
+  });
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const contact = document.getElementById('contact').value.trim();
+    const department = document.getElementById('department').value.trim();
+    const course = document.getElementById('course').value.trim();
+    const roleValue = role.value;
 
-        const name = document.getElementById('name').value.trim();
-        const contact = document.getElementById('contact').value.trim();
-        const department = document.getElementById('department').value.trim();
-        const course = document.getElementById('course').value.trim();
-        const roleValue = role.value;
+    if (name === '' || contact === '' || department === '') {
+      alert("Incorrect Credentials. Contact admin: 0784151456 or visit the department.");
+      return;
+    }
 
-        if (name === '' || contact === '' || department === '') {
-            alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
-            return;
-        }
+    if (roleValue === 'student' && course === '') {
+      alert("Course is required for students.");
+      return;
+    }
 
-        if (roleValue === 'student' && course === '') {
-            alert("Course is required for students.");
-            return;
-        }
+    if (department.length < 6 || department.toLowerCase().includes('initial')) {
+      alert("Incorrect Department. Contact admin.");
+      return;
+    }
 
-        if (department.length < 6 || department.toLowerCase().includes('initial')) {
-            alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
-            return;
-        }
+    if (roleValue === 'student') {
+      const admission = document.getElementById('admission').value.trim();
+      const admissionPattern = /^(DICT|CICT|LIS|DLIS|ICT5|ICT6|RAM5|RAM6|RAM4).*(S22|S23|S24|S25|M22|M23|M24|M25|J22|J23|J24|J25)$/i;
+      const contactPattern = /^(?:\+254|07|01)\d{8}$/;
 
-        if (roleValue === 'student') {
-            const admission = document.getElementById('admission').value.trim();
-            const admissionPattern = /^(DICT|CICT|LIS|DLIS|ICT5|ICT6|RAM5|RAM6|RAM4).*(S22|S23|S24|S25|M22|M23|M24|M25|J22|J23|J24|J25)$/i;
-            const contactPattern = /^(?:\+254|07|01)\d{8}$/;
+      if (!admissionPattern.test(admission) || !contactPattern.test(contact)) {
+        alert("Invalid credentials. Contact admin.");
+        return;
+      }
+    } else if (roleValue === 'staff') {
+      const staffNumber = document.getElementById('staffNumber').value.trim();
+      const contactPattern = /^(?:\+254|07|01)\d{8}$/;
 
-            if (!admissionPattern.test(admission) || !contactPattern.test(contact)) {
-                alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
-                return;
-            }
-        } else if (roleValue === 'staff') {
-            const staffNumber = document.getElementById('staffNumber').value.trim();
-            const contactPattern = /^(?:\+254|07|01)\d{8}$/;
+      if (staffNumber.length < 4 || staffNumber.length > 13 || !contactPattern.test(contact)) {
+        alert("Invalid credentials. Contact admin.");
+        return;
+      }
+    } else {
+      alert("Role not selected.");
+      return;
+    }
 
-            if (staffNumber.length < 4 || staffNumber.length > 13 || !contactPattern.test(contact)) {
-                alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
-                return;
-            }
-        } else {
-            alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
-            return;
-        }
-
-        window.location.href = "https://chat.whatsapp.com/Ly2IGqYb8BrK14VWHO6rnY";
-    });
+    window.location.href = "https://chat.whatsapp.com/Ly2IGqYb8BrK14VWHO6rnY";
+  });
 </script>
+
 </body>
 </html>
