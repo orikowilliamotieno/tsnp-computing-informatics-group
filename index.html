@@ -140,26 +140,33 @@
     <form id="loginForm">
         <label for="name">Full Name</label>
         <input type="text" id="name" required>
+
         <label for="role">Role</label>
         <select id="role" required>
             <option value="">Select</option>
             <option value="student">Student</option>
             <option value="staff">Staff</option>
         </select>
+
         <div id="studentFields" class="hidden">
             <label for="admission">Admission Number</label>
             <input type="text" id="admission">
         </div>
+
         <div id="staffFields" class="hidden">
             <label for="staffNumber">Staff Number</label>
             <input type="text" id="staffNumber">
         </div>
+
         <label for="contact">Contact</label>
         <input type="text" id="contact" required>
+
         <label for="department">Department</label>
         <input type="text" id="department" required>
-        <label for="course">Course</label>
+
+        <label for="course" id="courseLabel">Course</label>
         <input type="text" id="course" required>
+
         <button type="submit">Join Group</button>
     </form>
 </div>
@@ -198,18 +205,26 @@
     const role = document.getElementById('role');
     const studentFields = document.getElementById('studentFields');
     const staffFields = document.getElementById('staffFields');
+    const courseField = document.getElementById('course');
+    const courseLabel = document.getElementById('courseLabel');
     const form = document.getElementById('loginForm');
 
     role.addEventListener('change', () => {
         if (role.value === 'student') {
             studentFields.classList.remove('hidden');
             staffFields.classList.add('hidden');
+            courseField.classList.remove('hidden');
+            courseLabel.classList.remove('hidden');
         } else if (role.value === 'staff') {
             staffFields.classList.remove('hidden');
             studentFields.classList.add('hidden');
+            courseField.classList.add('hidden');
+            courseLabel.classList.add('hidden');
         } else {
             studentFields.classList.add('hidden');
             staffFields.classList.add('hidden');
+            courseField.classList.remove('hidden');
+            courseLabel.classList.remove('hidden');
         }
     });
 
@@ -220,9 +235,15 @@
         const contact = document.getElementById('contact').value.trim();
         const department = document.getElementById('department').value.trim();
         const course = document.getElementById('course').value.trim();
+        const roleValue = role.value;
 
-        if (name === '' || contact === '' || department === '' || course === '') {
+        if (name === '' || contact === '' || department === '') {
             alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
+            return;
+        }
+
+        if (roleValue === 'student' && course === '') {
+            alert("Course is required for students.");
             return;
         }
 
@@ -230,8 +251,6 @@
             alert("Incorrect Credentials please contact the administrator 0784151456 or visit the department for assistance.");
             return;
         }
-
-        const roleValue = role.value;
 
         if (roleValue === 'student') {
             const admission = document.getElementById('admission').value.trim();
