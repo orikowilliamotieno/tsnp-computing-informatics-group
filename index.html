@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="aW4YaIA3mcnQ0YOrDEc2VxNSyaSh4flfYztnEmDJ_QQ" />
   <link rel="canonical" href="https://orikowilliamotieno.github.io/tsnp-computing-informatics-group/">
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -21,6 +22,7 @@
       align-items: center;
       min-height: 100vh;
     }
+
     header {
       width: 100%;
       background: #003366;
@@ -29,12 +31,26 @@
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     .logo {
       width: 100px;
       height: auto;
       margin: 20px auto 10px;
       display: block;
     }
+
+    .notice-banner {
+      max-width: 700px;
+      margin: 10px auto 25px;
+      background: #004080;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
     .container {
       background: #ffffff;
       padding: 30px 20px;
@@ -43,12 +59,14 @@
       max-width: 500px;
       width: 90%;
     }
+
     form label {
       margin: 10px 0 5px;
       display: block;
       font-weight: bold;
       color: #003366;
     }
+
     form input, form select {
       width: 100%;
       padding: 10px;
@@ -57,6 +75,7 @@
       margin-bottom: 15px;
       font-size: 15px;
     }
+
     button {
       background-color: #007BFF;
       border: none;
@@ -68,12 +87,15 @@
       width: 100%;
       transition: background 0.3s ease;
     }
+
     button:hover {
       background-color: #0056b3;
     }
+
     .hidden {
       display: none;
     }
+
     .rules, .reference-links {
       background: #ffffff;
       margin: 20px auto;
@@ -83,20 +105,25 @@
       max-width: 90%;
       width: 600px;
     }
+
     .rules h2, .reference-links h2 {
       color: #004080;
       margin-bottom: 15px;
     }
+
     .rules ul, .reference-links ul {
       padding-left: 20px;
     }
+
     .reference-links a {
       text-decoration: none;
       color: #0066cc;
     }
+
     .reference-links a:hover {
       text-decoration: underline;
     }
+
     footer {
       width: 100%;
       background: #000033;
@@ -106,13 +133,16 @@
       position: fixed;
       bottom: 0;
     }
+
     footer marquee {
       font-weight: bold;
     }
+
     @media (max-width: 600px) {
       .container, .rules, .reference-links {
         padding: 15px;
       }
+
       form input, form select {
         font-size: 14px;
       }
@@ -165,21 +195,22 @@
     <label for="contact">Contact</label>
     <input type="text" id="contact" required>
 
-    <label for="department">Department</label>
-    <select id="department" required>
-      <option value="">Select</option>
-      <option value="Computing and Informatics">Computing and Informatics</option>
-      <option value="Business Studies">Business Studies</option>
-      <option value="Health and Applied Sciences">Health and Applied Sciences</option>
-      <option value="Hospitality and Tourism">Hospitality and Tourism</option>
-      <option value="Agriculture and Environmental Sciences">Agriculture and Environmental Sciences</option>
-      <option value="Liberal Studies">Liberal Studies</option>
-      <option value="Building and Civil Engineering">Building and Civil Engineering</option>
-      <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
-      <option value="Mechanical and Automotive Engineering">Mechanical and Automotive Engineering</option>
-      <option value="Institutional Management">Institutional Management</option>
-      <option value="Entrepreneurship and Research Innovation">Entrepreneurship and Research Innovation</option>
-    </select>
+   <label for="department">Department</label>
+<select id="department" required>
+  <option value="">Select</option>
+  <option value="Computing and Informatics">Computing and Informatics</option>
+  <option value="Business Studies">Business Studies</option>
+  <option value="Health and Applied Sciences">Health and Applied Sciences</option>
+  <option value="Hospitality and Tourism">Hospitality and Tourism</option>
+  <option value="Agriculture and Environmental Sciences">Agriculture and Environmental Sciences</option>
+  <option value="Liberal Studies">Liberal Studies</option>
+  <option value="Building and Civil Engineering">Building and Civil Engineering</option>
+  <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+  <option value="Mechanical and Automotive Engineering">Mechanical and Automotive Engineering</option>
+  <option value="Institutional Management">Institutional Management</option>
+  <option value="Entrepreneurship and Research Innovation">Entrepreneurship and Research Innovation</option>
+</select>
+
 
     <label for="course" id="courseLabel">Course</label>
     <input type="text" id="course" required>
@@ -258,32 +289,39 @@
       return;
     }
 
-    const contactPattern = /^(?:\+254|07|01)\d{8}$/;
+    if (roleValue === 'student' && course === '') {
+      alert("Invalid credentials. Contact admin.");
+      return;
+    }
+
+    if (department.length < 6 || department.toLowerCase().includes('initial')) {
+      alert("Invalid credentials. Contact admin.");
+      return;
+    }
 
     if (roleValue === 'student') {
       const admission = document.getElementById('admission').value.trim();
       const admissionPattern = /^(DICT|CICT|LIS|DLIS|ICT5|ICT6|RAM5|RAM6|RAM4).*(S22|S23|S24|S25|M22|M23|M24|M25|J22|J23|J24|J25)$/i;
+      const contactPattern = /^(?:\+254|07|01)\d{8}$/;
 
       if (!admissionPattern.test(admission) || !contactPattern.test(contact)) {
         alert("Invalid credentials. Contact admin.");
         return;
       }
-
     } else if (roleValue === 'staff') {
-      const staffNumber = document.getElementById('staffNumber').value.trim().toUpperCase();
-      const staffPattern = /^TSNP[a-zA-Z0-9]{0,11}$/i;
+      const staffNumber = document.getElementById('staffNumber').value.trim();
+      const contactPattern = /^(?:\+254|07|01)\d{8}$/;
+      const staffPattern = /^TSNP[a-zA-Z0-9]{0,11}$/;
 
       if (!staffPattern.test(staffNumber) || !contactPattern.test(contact)) {
         alert("Invalid credentials. Contact admin.");
         return;
       }
-
     } else {
       alert("Invalid credentials. Contact admin.");
       return;
     }
 
-    // Final redirect to WhatsApp group
     window.location.href = "https://chat.whatsapp.com/Ly2IGqYb8BrK14VWHO6rnY";
   });
 </script>
