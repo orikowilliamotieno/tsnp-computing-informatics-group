@@ -8,7 +8,6 @@
   <meta name="robots" content="index, follow">
   <meta name="author" content="Oriko William Otieno"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Verification Code -->
   <meta name="google-site-verification" content="aW4YaIA3mcnQ0YOrDEc2VxNSyaSh4flfYztnEmDJ_QQ" />
   <link rel="canonical" href="https://orikowilliamotieno.github.io/tsnp-computing-informatics-group/">
   
@@ -167,7 +166,7 @@
 
 <img src="logo.jpg" alt="TSNP Logo" class="logo">
 
-  <marquee behavior="scroll" direction="left">
+<marquee behavior="scroll" direction="left">
   <p>Only bonafide trainees of The Siaya National Polytechnic from the Department of Computing and Informatics are allowed to join this WhatsApp group.</p>
 </marquee>
 
@@ -190,7 +189,7 @@
 
     <div id="staffFields" class="hidden">
       <label for="staffNumber">Staff Number</label>
-      <input type="text" id="staffNumber">
+      <input type="text" id="staffNumber" maxlength="15">
     </div>
 
     <label for="contact">Contact</label>
@@ -272,17 +271,17 @@
     const roleValue = role.value;
 
     if (name === '' || contact === '' || department === '') {
-      alert("Incorrect Credentials. Contact admin: 0784151456 or visit the department.");
+      alert("Invalid credentials. Contact admin.");
       return;
     }
 
     if (roleValue === 'student' && course === '') {
-      alert("Course is required for students.");
+      alert("Invalid credentials. Contact admin.");
       return;
     }
 
     if (department.length < 6 || department.toLowerCase().includes('initial')) {
-      alert("Incorrect Department. Contact admin.");
+      alert("Invalid credentials. Contact admin.");
       return;
     }
 
@@ -298,13 +297,14 @@
     } else if (roleValue === 'staff') {
       const staffNumber = document.getElementById('staffNumber').value.trim();
       const contactPattern = /^(?:\+254|07|01)\d{8}$/;
+      const staffPattern = /^TSNP[a-zA-Z0-9]{0,11}$/;
 
-      if (staffNumber.length < 4 || staffNumber.length > 13 || !contactPattern.test(contact)) {
+      if (!staffPattern.test(staffNumber) || !contactPattern.test(contact)) {
         alert("Invalid credentials. Contact admin.");
         return;
       }
     } else {
-      alert("Role not selected.");
+      alert("Invalid credentials. Contact admin.");
       return;
     }
 
